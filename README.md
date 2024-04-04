@@ -1,4 +1,4 @@
-# AppNodejs :atom:
+# AppNodejs 🌐
 
 O AppNodejs é uma aplicação projetada para facilitar a gestão de participantes em eventos presenciais. Com esta ferramenta, os organizadores podem cadastrar eventos e disponibilizar uma página pública para inscrições. Os participantes, por sua vez, podem se inscrever, emitir uma credencial de inscrição e realizar o check-in no dia do evento.
 
