@@ -11,6 +11,19 @@
 //  npx prisma studio ferramenta para visualizar banco de dados
 //  npm i zod biblioteca especializada em validaçao
 
+
+
+// // Rota da home
+// app.get('/', () => {
+//     return 'Hellou da Mari'
+// })
+
+// app.get('/teste', () => {
+//     return 'Teste'
+// })
+
+
+
 Em uma API:
     -Métodos HTTP: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS...
     -Corpo da requisição (request body [post,put])
@@ -23,3 +36,16 @@ Banco de dados:
         -Driver Nativo
         -Query Builders
         -ORM -> prisma(Javascript) SQLAlchemy(Python) Django(Python)
+
+Status Code:
+    - xx1 => Algo foi criado
+    - 10x Informational -> Processamento em andamento
+    - 20x => Sucesso
+    - 30x => Redirecionamento
+    - 40x => Erro do cliente (erro de alguma info enviada para quem faz chamada a API)
+    - 50x => Erro do servidor (erro independente do que é enviado para o servidor)
+
+Ferramentas:
+    - Nano id: cria ids com caracteres escolhicos e com número  de letras definido
+    - Faker: Gera informações fake
+    -  
