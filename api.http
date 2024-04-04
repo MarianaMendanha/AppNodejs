@@ -1,0 +1,11 @@
+POST http://localhost:3333/events
+content-type: application/json
+
+# corpo da requisição
+
+{
+    "title": "Evento de Teste",
+    "details": "Descrição do Evento",
+    "slug": "e-d-t",
+    "maximumAttendees": 101
+}
