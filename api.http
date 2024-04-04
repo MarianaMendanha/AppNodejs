@@ -4,8 +4,25 @@ content-type: application/json
 # corpo da requisição
 
 {
-    "title": "Evento de Teste",
+    "title": "Evento de Tester 8",
     "details": "Descrição do Evento",
-    "slug": "e-d-t",
-    "maximumAttendees": 101
+    "maximumAttendees": 10
 }
+
+###
+
+POST http://localhost:3333/events/7aca9e60-bc1d-43d6-85c9-2b394f57741a/attendees
+content-type: application/json
+
+{
+    "name": "Opar",
+    "email": "opahi@gmail.com"
+}
+
+###
+GET  http://localhost:3333/events/fbf8e856-0704-4d74-adc9-a0a463afec72
+content-type: application/json
+
+###
+GET  http://localhost:3333/attendees/9/badge
+content-type: application/json
