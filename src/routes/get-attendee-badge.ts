@@ -11,7 +11,16 @@ export async function getAttendeeBadge(app: FastifyInstance) {
                 params: z.object({
                     attendeeId: z.string().transform(Number),
                 }),
-                response: {},
+                response: {
+                    200: z.object({
+                        badge: z.object({
+                            name: z.string(),
+                            email: z.string().email(),
+                            eventTitle: z.string(),
+                            checkInUrl: z.string().url(),
+                        })
+                    })
+                },
             }
         }, async (request, reply) => {
             const { attendeeId } = request.params
@@ -34,7 +43,17 @@ export async function getAttendeeBadge(app: FastifyInstance) {
             if (attendee === null) {
                 throw new Error('Participante não cadastrado.')
             }
+            
+            const baseUrl = `${request.protocol}://${request.hostname}`
+            const checkInUrl = new URL(`/attendees/${attendeeId}/check-in`, baseUrl) 
 
-            return reply.send({ attendee })
+            return reply.send({ 
+                badge: {
+                    name: attendee.name,
+                    email: attendee.email,
+                    eventTitle: attendee.event.title,
+                    checkInUrl: checkInUrl.toString(),
+                }
+            })
         })
 }
